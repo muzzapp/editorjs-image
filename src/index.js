@@ -359,6 +359,8 @@ export default class ImageTool {
     this._data.link = data.link || '';
     this._data.alt = data.alt || '';
     this.ui.fillCaption(this._data.caption);
+    this.ui.fillLink(this._data.link);
+    this.ui.fillAlt(this._data.alt);
 
     ImageTool.tunes.forEach(({ name: tune }) => {
       const value = typeof data[tune] !== 'undefined' ? data[tune] === true || data[tune] === 'true' : false;
