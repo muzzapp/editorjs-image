@@ -147,6 +147,8 @@ export default class ImageTool {
       field: config.field || 'image',
       types: config.types || 'image/*',
       captionPlaceholder: this.api.i18n.t(config.captionPlaceholder || 'Caption'),
+      linkPlaceholder: this.api.i18n.t(config.linkPlaceholder || 'Link'),
+      altPlaceholder: this.api.i18n.t(config.altPlaceholder || 'Alt'),
       buttonContent: config.buttonContent || '',
       uploader: config.uploader || undefined,
       actions: config.actions || [],
@@ -215,8 +217,12 @@ export default class ImageTool {
    */
   save() {
     const caption = this.ui.nodes.caption;
+    const link = this.ui.nodes.link;
+    const alt = this.ui.nodes.alt;
 
     this._data.caption = caption.innerHTML;
+    this._data.link = link.innerHTML;
+    this._data.alt = alt.innerHTML;
 
     return this.data;
   }
@@ -350,7 +356,11 @@ export default class ImageTool {
     this.image = data.file;
 
     this._data.caption = data.caption || '';
+    this._data.link = data.link || '';
+    this._data.alt = data.alt || '';
     this.ui.fillCaption(this._data.caption);
+    this.ui.fillLink(this._data.link);
+    this.ui.fillAlt(this._data.alt);
 
     ImageTool.tunes.forEach(({ name: tune }) => {
       const value = typeof data[tune] !== 'undefined' ? data[tune] === true || data[tune] === 'true' : false;
