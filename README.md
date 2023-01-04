@@ -4,7 +4,7 @@
 
 Image Block for the [Editor.js](https://editorjs.io).
 
-![](https://capella.pics/63a03d04-3816-45b2-87b2-d85e556f0066.jpg)
+![](/editorScreenshot.png)
 
 ## Features
 

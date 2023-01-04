@@ -159,5 +159,6 @@
 }
 
 .label {
+  display:block;
   padding-top: 8px;
 }

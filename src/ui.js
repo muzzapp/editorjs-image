@@ -52,16 +52,19 @@ export default class Ui {
     this.nodes.alt.dataset.placeholder = this.config.altPlaceholder;
     this.nodes.imageContainer.appendChild(this.nodes.imagePreloader);
     this.nodes.wrapper.appendChild(this.nodes.imageContainer);
-    let captionSpan = make("span");
-    captionSpan.innerHTML = "Caption:";
+    const captionSpan = make('span', ['label', this.CSS.caption]);
+
+    captionSpan.innerHTML = 'Caption:';
     this.nodes.wrapper.appendChild(captionSpan);
     this.nodes.wrapper.appendChild(this.nodes.caption);
-    let linkSpan = make("span");
-    linkSpan.innerHTML = "Link:";
+    const linkSpan = make('span', ['label', this.CSS.caption]);
+
+    linkSpan.innerHTML = 'Link:';
     this.nodes.wrapper.appendChild(linkSpan);
     this.nodes.wrapper.appendChild(this.nodes.link);
-    let altSpan = make("span");
-    altSpan.innerHTML = "Alt:";
+    const altSpan = make('span', ['label', this.CSS.caption]);
+
+    altSpan.innerHTML = 'Alt:';
     this.nodes.wrapper.appendChild(altSpan);
     this.nodes.wrapper.appendChild(this.nodes.alt);
     this.nodes.wrapper.appendChild(this.nodes.fileButton);
@@ -293,4 +296,3 @@ export default class Ui {
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
 }
-
