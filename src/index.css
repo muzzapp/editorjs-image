@@ -157,3 +157,7 @@
     transform: rotate(360deg);
   }
 }
+
+.label {
+  padding-top: 8px;
+}
