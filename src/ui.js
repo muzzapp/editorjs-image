@@ -53,16 +53,16 @@ export default class Ui {
     this.nodes.imageContainer.appendChild(this.nodes.imagePreloader);
     this.nodes.wrapper.appendChild(this.nodes.imageContainer);
     let captionSpan = make("span");
-    captionSpan.innerHTML = "Caption";
-    this.nodes.caption.prepend(captionSpan);
+    captionSpan.innerHTML = "Caption:";
+    this.nodes.wrapper.appendChild(captionSpan);
     this.nodes.wrapper.appendChild(this.nodes.caption);
     let linkSpan = make("span");
-    linkSpan.innerHTML = "Caption";
-    this.nodes.link.prepend(linkSpan);
+    linkSpan.innerHTML = "Link:";
+    this.nodes.wrapper.appendChild(linkSpan);
     this.nodes.wrapper.appendChild(this.nodes.link);
     let altSpan = make("span");
-    altSpan.innerHTML = "Caption";
-    this.nodes.alt.prepend(altSpan);
+    altSpan.innerHTML = "Alt:";
+    this.nodes.wrapper.appendChild(altSpan);
     this.nodes.wrapper.appendChild(this.nodes.alt);
     this.nodes.wrapper.appendChild(this.nodes.fileButton);
   }
