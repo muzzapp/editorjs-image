@@ -1,6 +1,11 @@
-![](https://badgen.net/badge/Editor.js/v2.0/blue)
+# Image Tool for Editor.js
 
-# Image Tool
+Forked from: https://github.com/editor-js/image
+
+## Features added
+
+- Alt tag field
+- Link field
 
 Image Block for the [Editor.js](https://editorjs.io).
 
